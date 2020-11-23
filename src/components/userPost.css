@@ -1,0 +1,62 @@
+
+.newsfeed-posts {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 100%;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.newsfeed-image {
+    width: 500px;
+    height: 300px;
+}
+
+.newsfeed-post-text {
+    margin: 5%;
+}
+
+.post-title {
+    font-size: 30px;
+}
+
+.post-user {
+    color: #388E3C;
+    font-family: "Work Sans";
+    font-weight: bold;
+}
+
+.newsfeed-post-text>* {
+    margin-top: 2%;
+}
+
+.post-text {
+    font-family: "Work Sans";
+}
+
+.post-interact {
+    margin-top: 1%;
+    font-family: "Work Sans";
+    font-weight: bold;
+    display:inline-block;
+    color: #388E3C;
+}
+
+.post-interact-vote {
+    display:inline-block;
+}
+
+.post-interact-vote>* {
+    margin-left: 10px;
+}
+
+.post-interact-comment {
+    display:inline-block;
+    margin-left: 40px;
+}
+.post-interact-comment>* {
+    margin-left: 10px;
+}
