@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
 
 .newsfeed {
     background-color: #EEEEEE;
@@ -9,8 +11,8 @@
 }
 
 .logo-white {
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-top: 20px;
+    margin-left: 70px;
     width: 50px;
     height: 50px;
     display:inline-block;
@@ -19,7 +21,7 @@
 .title-name {
     color: #FFFFFF;
     display:inline-block;
-    padding-left: 5%;
+    padding-left: 40px;
     font-family: "Bubblegum Sans";
     font-size: 40px;
 }
@@ -31,12 +33,10 @@
 }
 
 .user-menu {
-    display:inline-block;
     float: right;
-    padding-top: 5%;
-    padding-right: 5%;
+    padding-top: 20px;
+    padding-right: 40px;
     color: white;
-
 }
 
 .user-menu-text {
@@ -62,20 +62,67 @@
 }
 
 .newsfeed-body {
-    text-align: center;
     height: 100%;
-    overflow-y: scroll;
 }
 
 .newsfeed-posts {
-    padding-top: 4%;
-    padding-bottom: 4%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 100%;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .newsfeed-image {
-    width: 400px;
+    width: 500px;
     height: 300px;
 }
 
 .newsfeed-post-text {
+    margin: 5%;
+}
+
+.post-title {
+    font-size: 30px;
+}
+
+.post-user {
+    color: #388E3C;
+    font-family: "Work Sans";
+    font-weight: bold;
+}
+
+.newsfeed-post-text>* {
+    margin-top: 2%;
+}
+
+.post-text {
+    font-family: "Work Sans";
+}
+
+.post-interact {
+    margin-top: 1%;
+    font-family: "Work Sans";
+    font-weight: bold;
+    display:inline-block;
+    color: #388E3C;
+}
+
+.post-interact-vote {
+    display:inline-block;
+}
+
+.post-interact-vote>* {
+    margin-left: 10px;
+}
+
+.post-interact-comment {
+    display:inline-block;
+    margin-left: 40px;
+}
+.post-interact-comment>* {
+    margin-left: 10px;
 }
