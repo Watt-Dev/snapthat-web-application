@@ -3,18 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faCameraRetro, faCog, faSearch, faStream } from "@fortawesome/free-solid-svg-icons";
 import snapThatWhite from "../images/snapthatWhite.png";
 import './TopBar.css';
-import CreatePost from "./createpost/createPost";
 
 interface TopBarProps {
-    currentTab: string;
+    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    text: string;
+    tabNames: string[];
 }
 
 // eslint-disable-next-line
 const TopBar = ( props: TopBarProps ) => {
 
     const snapthatWhiteLogo = snapThatWhite;
-
-    const [tab, setTab] = useState("newsfeed");
 
     return (
         <div>
@@ -37,63 +36,55 @@ const TopBar = ( props: TopBarProps ) => {
                 </div>
             </div>
             <div className="menu-area">
-
-
-
                 <button
                     type="submit"
                     className="test-button"
-                    onClick={event => {
-                        setTab("newsfeed")
-                    }}
+                    onClick={props.onClick}
                 >
-                    <div className="menu-area-item" style={{color: tab === "newsfeed" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="stream-icon" icon={faStream} />
-                    <div className="menu-area-item-text">
-                        Newsfeed
-                    </div>
+                    <div className="menu-area-item" style={{color: props.text === "newsfeed" ? 'black' : 'white'}}>
+                        <FontAwesomeIcon className="stream-icon" icon={faStream} />
+                        <div className="menu-area-item-text">
+                            {props.tabNames[0]}
+                        </div>
                     </div>
                 </button>
                 <button
                     type="submit"
                     className="test-button"
-                    onClick={event => {
-                        setTab("create")
-                    }}
+                    onClick={props.onClick}
                 >
-                    <div className="menu-area-item" style={{color: tab === "create" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="search-icon" icon={faSearch} />
-                    <div className="menu-area-item-text">
-                        Search
+                    <div className="menu-area-item" style={{color: props.text === "search" ? 'black' : 'white'}}>
+                        <FontAwesomeIcon className="search-icon" icon={faSearch} />
+                        <div className="menu-area-item-text">
+                            {props.tabNames[1]}
+                        </div>
                     </div>
+                </button>
+                <button
+                    type="submit"
+                    className="test-button"
+                    onClick={props.onClick}
+                >
+                    <div className="menu-area-item" style={{color: props.text === "create" ? 'black' : 'white'}}>
+                        <FontAwesomeIcon className="camera-retro-icon" icon={faCameraRetro} />
+                        <div className="menu-area-item-text">
+                            {props.tabNames[2]}
+                        </div>
+                    </div>
+                </button>
+                <button
+                    type="submit"
+                    className="test-button"
+                    onClick={props.onClick}
+                >
+                    <div className="menu-area-item" style={{color: props.text === "settings" ? 'black' : 'white'}}>
+                        <FontAwesomeIcon className="cog-icon" icon={faCog} />
+                        <div className="menu-area-item-text">
+                            {props.tabNames[3]}
+                        </div>
                     </div>
                 </button>
 
-
-                <div className="menu-area-item" style={{color: props.currentTab === "newsfeed" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="stream-icon" icon={faStream} />
-                    <div className="menu-area-item-text">
-                        Newsfeed
-                    </div>
-                </div>
-                <div className="menu-area-item" style={{color: props.currentTab === "search" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="search-icon" icon={faSearch} />
-                    <div className="menu-area-item-text">
-                        Search
-                    </div>
-                </div>
-                <div className="menu-area-item" style={{color: props.currentTab === "create" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="camera-retro-icon" icon={faCameraRetro} />
-                    <div className="menu-area-item-text">
-                        Create
-                    </div>
-                </div>
-                <div className="menu-area-item" style={{color: props.currentTab === "settings" ? 'black' : 'white'}}>
-                    <FontAwesomeIcon className="cog-icon" icon={faCog} />
-                    <div className="menu-area-item-text">
-                        Settings
-                    </div>
-                </div>
             </div>
         </div>
     )

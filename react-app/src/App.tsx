@@ -3,15 +3,15 @@ import './App.css';
 import NewsFeed from "./components/newsfeed/newsfeed";
 import TopBar from "./components/TopBars";
 import CreatePost from "./components/createpost/createPost";
-import TopBar2 from "./components/TopBars2";
 
 // eslint-disable-next-line
 const App = () => {
-
-
     const [tab, setTab] = useState("newsfeed")
-    const tabNames = ["newsfeed", "create", "search"]
+    const tabNames = ["newsfeed", "search", "create", "settings"]
 
+    /**
+     * TODO: MUST ADD FUNCTIONALITY TO SWITCH BETWEEN ALL PAGES
+     */
     const onClick = ( () => {
         if (tab === "newsfeed")
             setTab("create");
@@ -22,7 +22,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <TopBar2 onClick={onClick} text={tab} tabNames={tabNames}/>
+            <TopBar onClick={onClick} text={tab} tabNames={tabNames}/>
             {/*<TopBar currentTab={currentTab}/>*/}
                 {(tab === "newsfeed") ?
                     <NewsFeed />
