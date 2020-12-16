@@ -5,6 +5,21 @@
     padding-bottom: 2%;
 }
 
+
+.test-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.test-button:hover {
+    border-bottom: solid black;
+}
+
+
+
+
 .logo-white {
     margin-top: 20px;
     margin-left: 70px;

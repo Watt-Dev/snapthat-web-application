@@ -12,7 +12,7 @@ const App = () => {
     return (
         <div className="App">
             <TopBar currentTab={currentTab}/>
-            {(currentTab === "newsfeed") ?
+                {(currentTab === "newsfeed") ?
                     <NewsFeed />
                 : (currentTab === "search") ?
                     <p>Coming soon</p>
