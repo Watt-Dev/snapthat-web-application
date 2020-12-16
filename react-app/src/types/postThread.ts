@@ -1,5 +1,5 @@
-import { UserPost } from './userpost';
+import { Userposttype } from './userposttype';
 
 export interface PostThread {
-    userPosts: UserPost[];
+    userPosts: Userposttype[];
 }

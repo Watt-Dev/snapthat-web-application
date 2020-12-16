@@ -1,9 +1,9 @@
-export interface UserPost {
+export interface Userposttype {
     id: number;
     title: string;
     caption: string;
     image_path: string;
     score: number;
     channel_id: number;
-    timestamp: Date;
+    timestamp: string;
 }
